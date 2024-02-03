@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>John</Name>
+  <Age>25</Age>
+  <Address>New York</Address>
+</Student><?xml version="1.0" encoding="utf-8"?>
+<Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>long</Name>
+  <Age>36</Age>
+  <Address>New York</Address>
+</Student>
