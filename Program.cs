@@ -15,12 +15,18 @@ namespace Serialization
             XmlSerializer serializer = new XmlSerializer(typeof(Student));//serialize object
 
 
-            using(TextWriter writerJson = new StreamWriter("StudentJson.xml"))//serialize object in json
+            using(TextWriter writerJson = new StreamWriter("StudentJson.json"))//serialize object in json
             {
                 writerJson.Write(JsonSerializer.Serialize(student));
             }
 
-            
+            using(TextReader readerJson = new StreamReader("StudentJson.json"))//deserialize object from json
+            {
+                Student studentJson = JsonSerializer.Deserialize<Student>(readerJson.ReadToEnd());
+                Console.WriteLine(studentJson.ToString());
+            }
+
+
             using (TextWriter writerXml = new StreamWriter("student.xml"))//put object in file
             {
                 serializer.Serialize(writerXml, student);
